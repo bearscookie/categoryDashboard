@@ -1,0 +1,246 @@
+.form {
+  padding-bottom: 21.5px;
+  border-bottom: 1px solid #d7e8e1;
+  :global {
+    .ant-form-item {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.select {
+  width: 184px !important;
+  :global {
+    .ant-select-selector {
+      border-radius: 0;
+      border-bottom: 1px solid #d9d9d9;
+      box-shadow: none;
+      background-color: transparent;
+      height: 40px;
+      padding: 0;
+      font-size: 16px;
+      color: #000;
+      line-height: 40px;
+
+      &:focus {
+        border-color: #d9d9d9;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.tabWrap {
+  // display: flex;
+  span {
+    flex: 1;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 5px 23px;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    &:hover {
+      color: #47ba71;
+    }
+    &.active {
+      color: #fff;
+      background: #47ba71;
+    }
+  }
+}
+
+.remarkTitle {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.5);
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+.remarkBtns {
+  height: 40px;
+  margin-top: 20px;
+  text-align: right;
+  right: 30px;
+  bottom: 15px;
+  position: absolute;
+  .cancel {
+    width: 88px;
+    height: 40px;
+    background: rgba(71, 186, 113, 0.11);
+    border: 1px solid #47ba71;
+    color: #47ba71;
+  }
+  .publish {
+    width: 88px;
+    height: 40px;
+    background: #47ba71;
+    color: #fff;
+  }
+}
+.bigDec {
+  width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tooltipDesc {
+  color: #d3002c;
+  background-color: #000;
+}
+
+.eidtBtn {
+  display: inline-block;
+  text-align: center;
+  width: 64px;
+  height: 28px;
+  background: rgba(71, 186, 113, 0.11);
+  border: 1px solid #47ba71;
+  font-size: 16px;
+  font-weight: 500;
+  color: #47ba71;
+  padding: 0;
+  border-radius: 0;
+}
+
+.updateBtn {
+  display: inline-block;
+  text-align: center;
+  width: 96px;
+  height: 28px;
+  background: #47ba71;
+  border: 1px solid #47ba71;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0;
+  border-radius: 0;
+  color: #fff;
+}
+
+.deleteBtn {
+  display: inline-block;
+  text-align: center;
+  width: 64px;
+  height: 28px;
+  background: #d3002c;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0;
+  border-radius: 0;
+  color: #fff;
+}
+
+.reset {
+  width: 88px;
+  height: 36px;
+  background: rgba(71, 186, 113, 0.11);
+  border: 1px solid #47ba71;
+  font-size: 16px;
+  font-weight: 500;
+  color: #47ba71;
+  line-height: 22px;
+  border-radius: 0;
+}
+
+.luru {
+  width: 136px;
+  height: 36px;
+  background: #47ba71;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 22px;
+  border-radius: 0;
+}
+
+.remarkTextrea {
+  width: 792px;
+  height: 194px;
+  margin-left: 26px;
+}
+
+.setpContent {
+  padding: 0 3px;
+  :global {
+    .ant-steps-item {
+      margin-top: 16px;
+    }
+    .ant-steps-item-content {
+      width: 787px !important;
+      min-height: 98px;
+      background: rgba(255, 255, 255, 0.3);
+      box-shadow: 0px 6px 14px 0px rgba(43, 93, 61, 0.11);
+      // margin-top: 16px;
+    }
+    .ant-steps-item-tail {
+      margin-left: 2px !important;
+      &::after {
+        height: calc(100% + 20px) !important;
+      }
+    }
+    .ant-steps-item-icon {
+      width: 14px !important;
+      height: 14px !important;
+      margin-left: 2px;
+    }
+  }
+  .listTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 790px;
+    height: 60px;
+    span {
+      &:nth-child(1) {
+        font-size: 22px;
+        font-weight: 500;
+        color: #000000;
+        padding: 14px 20px;
+      }
+      &:nth-child(2) {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: left;
+        color: rgba(0, 0, 0, 0.3);
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .comment {
+    padding: 0 20px;
+    div {
+      margin-top: 10px;
+    }
+    span {
+      &:nth-child(1) {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: left;
+        color: #47ba71;
+        background: rgba(71, 186, 113, 0.1);
+        border-radius: 18px;
+        display: inline-block;
+        padding: 0 10px;
+      }
+      &:nth-child(2) {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: left;
+        color: rgba(0, 0, 0, 0.5);
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.prBtn {
+  margin-top: 20px;
+  text-align: right;
+}

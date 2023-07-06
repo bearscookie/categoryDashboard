@@ -1,0 +1,10 @@
+@tailwind components;
+
+@tailwind utilities;
+
+html, body, #app {
+  height: 100%;
+}
+.noPaddingColumn {
+  padding: 8px 0 !important;
+}

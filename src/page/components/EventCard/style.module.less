@@ -1,0 +1,46 @@
+.card {
+  margin: 0px 4px 8px 4px;
+  padding: 14px 0 11px 0;
+  background: rgba(255, 255, 255, 0.8);
+  width: calc(33.3% - 8px);
+  height: 70px;
+  cursor: pointer;
+  text-align: center;
+  border-bottom: 3px solid #47ba71;
+  .amount {
+    width: 42px;
+    margin: 0 auto 5px auto;
+    background: rgba(71, 186, 113, 0.1);
+    border: 0.5px solid rgba(71, 186, 113, 0.5);
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    color: #47ba71;
+    line-height: 20px;
+  }
+
+  .status {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 20px;
+    text-align: center;
+  }
+  &.lowRisk {
+    border-bottom: 3px solid #fd971a;
+    .amount {
+      background: rgba(253, 151, 26, 0.1);
+      border: 0.5px solid rgba(253, 151, 26, 0.5);
+      color: #fd971a;
+    }
+  }
+  &.highRisk {
+    border-bottom: 3px solid #d5133b;
+    .amount {
+      background: rgba(213, 19, 59, 0.1);
+      border: 0.5px solid rgba(213, 19, 59, 0.5);
+      color: #d5133b;
+    }
+  }
+}

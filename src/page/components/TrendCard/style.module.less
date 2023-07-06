@@ -1,0 +1,92 @@
+.trendCard {
+  height: 224px;
+  width: 180px;
+  margin-top: 5px;
+  background: rgba(215, 232, 225, 0.25);
+  padding: 10px 10px 10px 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  h5 {
+    font-size: 0.85rem;
+    position: absolute;
+    text-align: left;
+    color: #fff;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    background-color:#47BA71 ;
+    padding: 5px 5px;
+  }
+  .content {
+    margin-top: 20px;
+    &>div{
+    }
+    .amount {
+      font-size:30px;
+      font-weight: 700;
+      text-align: left;
+      color: #000;
+      width: 220px;
+      span:last-child{
+        font-size: 12px;
+        color: #47BA71;
+        background: rgba(71,186,113,0.10);
+        border-radius: 11px;
+      }
+    
+    }
+    // justify-content: space-between;
+    .result {
+      margin-top: 10px;
+      font-size: 0.75rem;
+      color: rgba(0, 0, 0, 0.5);
+      &>div{
+        margin-top: 5px;
+      }
+      // & > div:nth-child(1) {
+      //   span{
+      //     display: inline-block;
+      //      color: rgba(0, 0, 0, 0.5);
+      //   }
+      //   span:nth-child(1) {
+      //     color: rgba(0, 0, 0, 0.5);
+      //     // width: 50px;
+      //   }
+      //   span:nth-child(2) {
+      //     color: rgba(0, 0, 0, 0.5);
+      //   }
+      // }
+      & > div:nth-child(2) {
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+    .contrast {
+      font-size: 0.75rem;
+      & > span:nth-child(1) {
+        color: rgba(0, 0, 0, 0.5);
+      }
+      & > span:nth-child(2) {
+        color: #47ba71;
+      }
+    }
+  }
+}
+.subTitle{
+  display: inline-block;
+  
+}
+.normalData{
+  color: #d5133b !important;
+}
+.gxIcon{
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url('../../../assets/images/categroy-icon/gailan.png') no-repeat;
+  background-size: 100%;
+  margin-left: 5px;
+  position: relative;
+  top: 3px;
+  
+}

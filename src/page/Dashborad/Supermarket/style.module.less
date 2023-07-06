@@ -1,0 +1,25 @@
+.spinContent {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh !important;
+  max-height: 100vh !important;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  z-index: 1000;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.topWrap {
+
+  display: flex;
+  & > div {
+    &:nth-child(2) {
+      margin-left: 20px;
+      width: calc(100% - 590px);
+    }
+  }
+}

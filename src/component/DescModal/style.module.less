@@ -1,0 +1,39 @@
+.descList {
+  max-height: 700px;
+  overflow: auto;
+  .item {
+    display: flex;
+    border-top: 1px solid #d7e8e1;
+    align-items: center;
+    div:nth-child(1) {
+      width: 180px;
+      font-size: 14px;
+      font-weight: 500;
+      height: 100%;
+      text-align: left;
+      color: #000000;
+      text-align: right;
+      background: rgba(215, 232, 225, 0.2);
+      border-right: 1px solid #d7e8e1;
+      padding: 15px 8px 15px 0;
+    }
+    div:nth-child(2) {
+      flex: 1;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: left;
+      color: rgba(0, 0, 0, 0.5);
+      line-height: 15px;
+      padding-left: 15px;
+      padding-right: 10px;
+    }
+  }
+}
+
+.descIcon {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  cursor: pointer;
+  margin-left: 10px;
+}

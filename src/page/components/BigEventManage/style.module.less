@@ -1,0 +1,68 @@
+.container {
+  width: 100px;
+  & > div {
+    display: flex;
+    align-items: center;
+    span{
+      width: 50px;
+    }
+    img {
+      width: 13px;
+      height: 13px;
+      margin-right: 7px;
+    }
+  }
+}
+.categoryTab{
+  display: inline-block;
+  color: #47BA71;
+  font-size: 14px;
+  background: rgba(71,186,113,0.10);
+  border-radius: 11px;
+  margin-left: 10px;
+  padding: 0px 5px;
+  margin-top: 10px;
+
+}
+.normal{
+  display: flex;
+  align-items: center;
+  b{
+    display: inline-block;
+    margin-right: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #47BA71;
+  }
+}
+.abnormality{
+   display: flex;
+   display: inline-block;
+   cursor: pointer;
+   b{
+     display: inline-block;
+    margin-right: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #d3002c;
+   }
+   
+}
+.titleContent{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bigDec{
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tooltipDesc {
+  color: #d3002c;
+  background-color: #000;
+}

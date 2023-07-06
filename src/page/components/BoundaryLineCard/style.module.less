@@ -1,0 +1,56 @@
+.card {
+  margin: 0px 4px 8px 4px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  width: calc(50% - 24px);
+  box-sizing: content-box;
+  align-items: center;
+}
+
+.key {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 20px;
+}
+
+.value {
+  flex: 0 0 auto;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+  color: #d3002c;
+  line-height: 20px;
+  cursor: pointer;
+}
+.isNormal{
+  color: #d3002c !important;
+}
+.emptyValue {
+  width: 15px;
+  height: 15px;
+  background: url('../../../assets/images/categroy-icon/jinduzhengchang.png') no-repeat;
+  background-size: 100%;
+}
+.lineO {
+  color: #47ba71;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.lineS {
+  margin-bottom: 10px;
+  span {
+    &:nth-child(1) {
+      color: #47ba71;
+    }
+    &:nth-child(2) {
+      margin-left: 10px;
+      color: #333;
+    }
+  }
+}

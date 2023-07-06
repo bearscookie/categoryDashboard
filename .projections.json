@@ -1,0 +1,11 @@
+{
+  "src/component/*": {
+    "type": "component"
+  },
+  "src/page/*": {
+    "type": "page"
+  },
+  "src/tool/*": {
+    "type": "tool"
+  }
+}

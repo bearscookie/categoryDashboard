@@ -1,0 +1,56 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": [
+      "es6",
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "downlevelIteration": true,
+    "module": "es2020",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "sourceMap": true,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "strictPropertyInitialization": false,
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ],
+    "paths": {
+      "tool/*": [
+        "./src/tool/*"
+      ],
+      "component/*": [
+        "./src/component/*"
+      ],
+      "page/*": [
+        "./src/page/*"
+      ],
+      "service/*": [
+        "./src/service/*"
+      ],
+      "src/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "include": [
+    "src",
+    "webpack.config.ts",
+    "vite.config.ts",
+    "jest.config.ts",
+    "config"
+  ]
+}
