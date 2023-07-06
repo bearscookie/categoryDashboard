@@ -110,7 +110,7 @@ export const userInfo = mobxRequest({
             url: '/bigEventManage/bigEventAdd',
             linkType: 1,
             isShow: true,
-            authList: [0, 2, 3],
+            authList: [0, 3],
           },
           {
             code: 'bigEventList',
@@ -119,7 +119,7 @@ export const userInfo = mobxRequest({
             url: '/bigEventManage/bigEventList',
             linkType: 1,
             isShow: true,
-            authList: [0, 2, 3],
+            authList: [0, 1, 2, 3],
           },
         ],
       },

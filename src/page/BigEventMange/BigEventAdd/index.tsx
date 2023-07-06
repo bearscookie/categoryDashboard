@@ -5,14 +5,15 @@ import React, { useEffect, useState } from 'react'
 import noData from 'src/assets/images/categroy-icon/noData.png'
 import { router } from 'src/router'
 import { getdepartment } from 'src/services/Common'
+import dayjs from 'dayjs'
 import {
   addBigEvent,
+  getBigEvent,
   getDraftByBigBoss,
   getReferValue,
   getSecondCategory,
   updateBigEvent,
 } from 'src/services/BigEventManage'
-import moment from 'moment'
 
 import styles from './style.module.less'
 import SelectEventModal from './selectEventModal'
@@ -190,6 +191,7 @@ const BigEventAdd = () => {
 
   useEffect(() => {
     if (isEdit) {
+      queryObj.date = [dayjs(queryObj.beginDate, 'YYYY-MM'), dayjs(queryObj.endDate, 'YYYY-MM')]
       const ob: any = { ...queryObj }
       Object.keys(ob).forEach(key => {
         if (ob[key] === 'null') {
@@ -480,8 +482,8 @@ const BigEventAdd = () => {
                   <div>参考值</div>
                   <div>
                     <Form.Item rules={[{ required: true, message: '请选择参考值' }]}>
-                      <Input value={`去年同期${referValue?.lastMonth}`} disabled style={{ width: 185 }} />
-                      <Input value={`上月${referValue?.lastYear}`} disabled style={{ marginLeft: 10, width: 185 }} />
+                      <Input value={`去年同期${referValue?.lastMonth || '无'}`} disabled style={{ width: 185 }} />
+                      <Input value={`上月${referValue?.lastYear || '无'}`} disabled style={{ marginLeft: 10, width: 185 }} />
                     </Form.Item>
                   </div>
                 </div>
@@ -502,6 +504,7 @@ const BigEventAdd = () => {
                 form.setFieldValue('index', data?.index)
               }}
               visible={eventModalVisble}
+              customBigEvent={bigEvent?.region && data?.bigEvent }
             />
           )}
           {indexModalVisble && (

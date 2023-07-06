@@ -56,6 +56,7 @@ const BigEventList = () => {
   }
 
   const handleModify = (record: any) => {
+    record.targetValue = record.target
     const params = Object.entries(record).length ? `?${new URLSearchParams(record)}` : ''
     router.push(`/bigEventManage/bigEventAdd${params}`)
   }

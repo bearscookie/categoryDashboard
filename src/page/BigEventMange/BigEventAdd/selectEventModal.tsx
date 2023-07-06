@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { useEffect, useState } from 'react'
-import { Modal, Table } from 'antd'
+import { Modal, Table, Input } from 'antd'
 import { getBigEventForAdd } from 'src/services/BigEventManage'
 
 import styles from './style.module.less'
@@ -9,6 +9,12 @@ import styles from './style.module.less'
 const SelectEventModal = (props: any) => {
   const [list, setList] = useState<any[]>()
   const [selectedBigEvent, setSelectedBigEvent] = useState<any>()
+  const [customBigEvent, setCustomBigEvent] = useState<any[]>()
+  const onInputCustom = (e: any, record: any) => {
+    const newVal = record
+    newVal.bigEvent = e.target.value
+    setCustomBigEvent(newVal)
+  }
   const columns: any = [
     {
       title: '大事件领域',
@@ -19,6 +25,17 @@ const SelectEventModal = (props: any) => {
       title: '建议大事件',
       dataIndex: 'bigEvent',
       render: (text: any, record: any) => {
+        if (record.region === '自定义') {
+          return (
+            <div>
+              <Input
+                defaultValue={customBigEvent}
+                onChange={event => onInputCustom(event, record)}
+                style={{ width: 350, marginLeft: 10 }}
+              />
+            </div>
+          )
+        }
         if (props.categoryRole === '尝新' && record.newRole === '1') {
           return <div className={styles.rgbg}>{text}</div>
         }
@@ -79,6 +96,9 @@ const SelectEventModal = (props: any) => {
   }
 
   const handleOk = () => {
+    if (selectedBigEvent.region === '自定义') {
+      setSelectedBigEvent(customBigEvent)
+    }
     props.handleOk(selectedBigEvent)
   }
 

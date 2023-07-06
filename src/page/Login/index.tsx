@@ -12,6 +12,7 @@ const fakeAccounts: Array<any> = [
   {
     username: 'categoryadmin',
     password: 'bcg123456#',
+    bigboss: '马小兔',
     // 0 管理员，1 大商超负责任， 2 一级部门负责人， 3 二级部门负责人
     userType: 0,
     // 具体部门逗号隔开 或者 all
@@ -22,6 +23,7 @@ const fakeAccounts: Array<any> = [
   {
     username: 'dscowner',
     password: 'bcg123456#',
+    bigboss: '马小兔',
     // 0 管理员，1 大商超负责任， 2 一级部门负责人， 3 二级部门负责人
     userType: 1,
     // 具体部门 或者 all
@@ -32,6 +34,7 @@ const fakeAccounts: Array<any> = [
   {
     username: 'xiushi',
     password: 'bcg123456#',
+    bigboss: '马小兔',
     // 0 管理员，1 大商超负责任， 2 一级部门负责人， 3 二级部门负责人
     userType: 2,
     // 具体部门 或者 all
@@ -42,6 +45,7 @@ const fakeAccounts: Array<any> = [
   {
     username: 'yinliao',
     password: 'bcg123456#',
+    bigboss: '马小兔',
     // 0 管理员，1 大商超负责任， 2 一级部门负责人， 3 二级部门负责人
     userType: 3,
     // 具体部门 或者 all
@@ -52,6 +56,7 @@ const fakeAccounts: Array<any> = [
   {
     username: 'jianguo',
     password: 'bcg123456#',
+    bigboss: '马小兔',
     // 0 管理员，1 大商超负责任， 2 一级部门负责人， 3 二级部门负责人
     userType: 3,
     // 具体部门 或者 all
