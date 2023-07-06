@@ -72,6 +72,7 @@ export const userInfo = mobxRequest({
             url: '/dashborard/supermarket',
             linkType: 1,
             isShow: true,
+            authList: [0, 1],
           },
           {
             code: '/dashborard/firstDepartment',
@@ -80,6 +81,7 @@ export const userInfo = mobxRequest({
             url: '/dashborard/firstDepartment',
             linkType: 1,
             isShow: true,
+            authList: [0, 1, 2],
           },
           {
             code: '/dashborard/secondDepartment',
@@ -88,6 +90,7 @@ export const userInfo = mobxRequest({
             url: '/dashborard/secondDepartment',
             linkType: 3,
             isShow: true,
+            authList: [0, 1, 2, 3],
           },
         ],
       },
@@ -107,6 +110,7 @@ export const userInfo = mobxRequest({
             url: '/bigEventManage/bigEventAdd',
             linkType: 1,
             isShow: true,
+            authList: [0, 2, 3],
           },
           {
             code: 'bigEventList',
@@ -115,11 +119,24 @@ export const userInfo = mobxRequest({
             url: '/bigEventManage/bigEventList',
             linkType: 1,
             isShow: true,
+            authList: [0, 2, 3],
           },
         ],
       },
     ]
-    setMenuList(mockMenu)
+    const userInfoStr = localStorage.getItem('userInfo')
+    let filterMockMenu = mockMenu
+    if (userInfoStr?.length) {
+      const userInfo = JSON.parse(userInfoStr)
+      const userType = userInfo && userInfo.userType
+      filterMockMenu = mockMenu.map(menu => {
+        const newCmenu = menu.children.filter(cmenu => cmenu.authList && cmenu.authList.findIndex(x => userType === x) !== -1)
+        menu.children = newCmenu
+        return menu
+      })
+    }
+    console.log('filterMockMenu', filterMockMenu)
+    setMenuList(filterMockMenu)
 
     // 获取第一个菜单
     // getAuthFirstMenu()
