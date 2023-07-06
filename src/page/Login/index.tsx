@@ -57,7 +57,7 @@ const fakeAccounts: Array<any> = [
     // 具体部门 或者 all
     firstDepartment: '休食饮品业务部',
     // 具体部门 或者 all
-    secondDepartment: '坚果组',
+    secondDepartment: '饮料组,坚果组',
   },
 ]
 
