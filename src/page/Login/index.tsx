@@ -7,14 +7,67 @@ import loginLeft from '../../assets/images/categroy-icon/loginLeft.png'
 
 import styles from './style.module.less'
 
-const correctAP: any = {
-  username: 'categoryadmin',
-  password: 'bcg123456#',
-}
+// 假账号
+const fakeAccounts: Array<any> = [
+  {
+    username: 'categoryadmin',
+    password: 'bcg123456#',
+    // 0 管理员，1 大商超负责任， 2 一级部门负责人， 3 二级部门负责人
+    userType: 0,
+    // 具体部门逗号隔开 或者 all
+    firstDepartment: 'all',
+    // 具体部门 或者 all
+    secondDepartment: 'all',
+  },
+  {
+    username: 'dscowner',
+    password: 'bcg123456#',
+    // 0 管理员，1 大商超负责任， 2 一级部门负责人， 3 二级部门负责人
+    userType: 1,
+    // 具体部门 或者 all
+    firstDepartment: 'all',
+    // 具体部门 或者 all
+    secondDepartment: 'all',
+  },
+  {
+    username: 'xiushi',
+    password: 'bcg123456#',
+    // 0 管理员，1 大商超负责任， 2 一级部门负责人， 3 二级部门负责人
+    userType: 2,
+    // 具体部门 或者 all
+    firstDepartment: '休食饮品业务部',
+    // 具体部门 或者 all
+    secondDepartment: 'all',
+  },
+  {
+    username: 'yinliao',
+    password: 'bcg123456#',
+    // 0 管理员，1 大商超负责任， 2 一级部门负责人， 3 二级部门负责人
+    userType: 3,
+    // 具体部门 或者 all
+    firstDepartment: '休食饮品业务部',
+    // 具体部门 或者 all
+    secondDepartment: '饮料组',
+  },
+  {
+    username: 'jianguo',
+    password: 'bcg123456#',
+    // 0 管理员，1 大商超负责任， 2 一级部门负责人， 3 二级部门负责人
+    userType: 3,
+    // 具体部门 或者 all
+    firstDepartment: '休食饮品业务部',
+    // 具体部门 或者 all
+    secondDepartment: '坚果组',
+  },
+]
 
 const onFinish = (values: any) => {
-  if (values.password === correctAP.password && values.username === correctAP.username) {
-    localStorage.setItem('userName', values.username)
+  const inputUsername = values.username
+  const account = fakeAccounts.find(acc => acc.username === inputUsername && acc.password === values.password)
+  if (account) {
+    localStorage.setItem('userName', inputUsername)
+    const accountString = JSON.stringify(account)
+    localStorage.setItem('userInfo', accountString)
     window.location.href = '/dashborard/supermarket'
   } else {
     message.error('账号密码不正确请重新输入')

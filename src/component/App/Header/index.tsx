@@ -20,10 +20,9 @@ export const Header: React.FC = observer(() => (
         {/* <UserOutlined /> */}
         {userInfo.value.user?.nickname || ''}
       </span>
-      {/* <Button type="link" onClick={logout}>
+      <Button type="link" onClick={logout} title="登出">
         <LogoutOutlined />
-        注销
-      </Button> */}
+      </Button>
     </section>
   </Layout.Header>
 ))

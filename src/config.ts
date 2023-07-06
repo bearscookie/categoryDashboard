@@ -3,9 +3,7 @@ const isPre = process.env.LOGIN_ENV === 'pre'
 
 export const config = {
   // 使用erp登录的地址
-  loginHost: `${isProduction || isPre ? 'https' : 'http'}://${
-    isProduction || isPre ? '' : 'test.'
-  }ssa.example.com/sso/login`,
+  loginHost: `${isProduction || isPre ? 'https' : 'http'}://${isProduction || isPre ? '' : 'localhost:3200'}/login`,
 
   /**
    * 所有fetch请求都需要添加的参数
